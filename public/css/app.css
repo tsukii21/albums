@@ -1,0 +1,421 @@
+@font-face {
+  font-family: "Quicksand-Bold";
+  src: url("../fonts/Quicksand-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../fonts/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Canterbury";
+  src: url("../fonts/Canterbury.ttf");
+}
+@font-face {
+  font-family: "Roboto-Thin";
+  src: url("../fonts/Roboto-Thin.ttf");
+}
+
+body {
+  background-color: black;
+}
+nav {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.overlay {
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 15;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.logo {
+  font-size: 80px;
+  color: white;
+  font-family: "Canterbury";
+  padding: 0px 20px 0px 60px;
+  float: left;
+}
+.add {
+  float: right;
+}
+.add-button {
+  border: none;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 55px;
+  padding: 20px 50px 20px 0px;
+  transition-duration: 0.6s;
+}
+.add-button:hover {
+  color: white;
+}
+
+#container {
+  overflow: hidden;
+  height: 300vh;
+  display: block;
+  font-family: "Roboto-Bold";
+  background-color: black;
+}
+
+.text {
+  font-size: 160px;
+
+  position: fixed;
+  background-color: transparent;
+  color: white;
+  -webkit-text-stroke: 2px white;
+  -webkit-text-fill-color: transparent;
+}
+.layer {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 300vh;
+  transform: translateY(0px);
+  background-color: transparent;
+  overflow: hidden;
+}
+.album-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#layer7 {
+  z-index: 7;
+}
+#zayn {
+  position: fixed;
+  top: 80vh;
+  left: -200px;
+  height: 600px;
+  width: 600px;
+  background-image: url("../covers/zayn.jpg");
+}
+#layer6 {
+  z-index: 6;
+}
+
+#bieber {
+  position: fixed;
+  top: -150px;
+  right: -150px;
+  height: 450px;
+  width: 450px;
+  background-image: url("../covers/bieber.jpg");
+}
+#kygo {
+  position: fixed;
+  top: 150vh;
+  left: 55vh;
+  height: 400px;
+  width: 400px;
+  background-image: url("../covers/martin.jpg");
+}
+#layer5 {
+  z-index: 5;
+}
+#quote {
+  top: 24vh;
+  left: 20vh;
+  background-color: transparent;
+  color: white;
+  font-size: 200px;
+  line-height: 200px;
+  -webkit-text-stroke: 2px white;
+  -webkit-text-fill-color: transparent;
+}
+
+#layer4 {
+  z-index: 4;
+}
+
+#adele {
+  position: fixed;
+  top: 15vh;
+  right: 400px;
+  height: 470px;
+  width: 470px;
+  background-image: url("../covers/adele.jpg");
+}
+#layer3 {
+  z-index: 3;
+}
+
+#girlcrush {
+  position: fixed;
+  top: 70vh;
+  right: 250px;
+  height: 350px;
+  width: 350px;
+  background-image: url("../covers/girlcrush.jpg");
+}
+#martin {
+  position: fixed;
+  top: 144vh;
+  left: 10vh;
+  height: 300px;
+  width: 300px;
+  background-image: url("../covers/kygo.jpg");
+}
+#layer2 {
+  z-index: 2;
+}
+
+#weeknd {
+  position: fixed;
+  top: 20vh;
+  left: 100px;
+  height: 300px;
+  width: 300px;
+  background-image: url("../covers/weeknd.jpg");
+}
+#bts {
+  position: fixed;
+  top: 110vh;
+  right: 20vh;
+  height: 200px;
+  width: 200px;
+  background-image: url("../covers/bts.jpg");
+}
+#layer1 {
+  z-index: 1;
+}
+
+#ariana {
+  position: fixed;
+  top: -15vh;
+  left: 250px;
+  height: 200px;
+  width: 200px;
+  background-image: url("../covers/ariana.jpg");
+}
+#links {
+  z-index: 8;
+}
+.links {
+  position: fixed;
+  bottom: 5vh;
+  right: 30vh;
+  line-height: 170px;
+}
+a {
+  text-decoration: none !important;
+}
+
+.link {
+  transition-duration: 1s;
+  float: left;
+}
+.link:hover {
+  -webkit-text-stroke: 2px red;
+}
+
+.album-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2vh 2vh 5vh 7vh;
+  background-color: black;
+}
+.row {
+  width: 100%;
+}
+.box {
+  height: 200px;
+  width: 200px;
+  margin: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: red;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.box:hover {
+  transform: scale(1.1);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.overlay {
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 15;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.add-left {
+  height: 100vh;
+  width: 50%;
+  float: left;
+}
+.add-right {
+  height: 100vh;
+  width: 50%;
+  float: right;
+  padding-top: 200px;
+}
+
+.album-image {
+  position: fixed;
+  top: 15vh;
+  left: 20vh;
+  height: 70vh;
+  width: 70vh;
+  background: grey;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.close-button {
+  position: fixed;
+  font-family: "Roboto-Thin";
+  font-weight: 50;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  right: 5vh;
+  font-size: 100px;
+  border: none;
+  transition-duration: 0.5s;
+}
+.close-button:hover {
+  color: white;
+}
+button {
+  outline: none !important;
+}
+
+.text-input {
+  width: 90%;
+  border: none;
+  font-family: Arial;
+  font-size: 60px;
+  margin: 20px;
+  background-color: transparent;
+  color: white;
+}
+.showname {
+  font-family: "Roboto-Regular";
+  font-size: 50px;
+}
+.showartist {
+  font-family: "Roboto-Regular";
+  text-transform: uppercase;
+
+  font-size: 60px;
+}
+.text-input::placeholder {
+  color: grey;
+}
+
+.cover-input {
+  overflow: hidden;
+  position: relative;
+}
+
+.cover-input [type="file"] {
+  cursor: inherit;
+  display: block;
+  font-size: 999px;
+  filter: alpha(opacity=0);
+  min-height: 100%;
+  min-width: 100%;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+}
+.cover-input {
+  position: absolute;
+  margin-left: -57px;
+  color: rgb(255, 255, 255, 0.5);
+  font-family: Arial;
+  font-size: 30px;
+  line-height: 70vh;
+  cursor: pointer;
+  cursor: pointer;
+}
+.submit-button {
+  margin-top: 60px;
+  margin-left: 400px;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 4px solid grey;
+  color: grey;
+  font-family: Arial;
+  font-size: 40px;
+  transition-duration: 0.5s;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.submit-button:hover {
+  color: white;
+  background-color: grey;
+}
+.side-button {
+  top: 40vh;
+}
+
+#image {
+  left: 60vh;
+  height: 80vh;
+  width: 80vh;
+  top: 10vh;
+  transform: translateX(0);
+  transition-duration: 0.6s;
+  z-index: 10;
+}
+#right {
+  display: none;
+}
